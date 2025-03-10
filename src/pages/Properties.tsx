@@ -5,7 +5,7 @@ import Footer from '../components/layout/Footer';
 import SearchFilters from '../components/properties/SearchFilters';
 import PropertyGrid from '../components/properties/PropertyGrid';
 import { properties } from '../data/properties';
-import { Buildings } from 'lucide-react';
+import { Building } from 'lucide-react';
 
 const Properties = () => {
   const [loading, setLoading] = useState(true);
@@ -75,7 +75,7 @@ const Properties = () => {
           <div className="mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
             <div className="flex items-center gap-3">
               <div className="bg-estate-gold/10 w-12 h-12 rounded-full flex items-center justify-center">
-                <Buildings size={24} className="text-estate-gold" />
+                <Building size={24} className="text-estate-gold" />
               </div>
               <h1 className="text-3xl md:text-4xl font-display font-semibold text-estate-navy dark:text-white">
                 Properties
