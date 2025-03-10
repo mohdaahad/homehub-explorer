@@ -34,11 +34,13 @@ const PropertyGrid: React.FC<PropertyGridProps> = ({ properties, loading = false
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {properties.map((property, index) => (
-        <PropertyCard 
-          key={property.id} 
-          {...property} 
-          style={{ animationDelay: `${0.1 + index * 0.1}s` }}
-        />
+        <div 
+          key={property.id}
+          className="animate-fade-in opacity-0" 
+          style={{ animationDelay: `${0.1 + index * 0.1}s`, animationFillMode: 'forwards' }}
+        >
+          <PropertyCard {...property} />
+        </div>
       ))}
     </div>
   );
